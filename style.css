@@ -45,6 +45,21 @@
     position: absolute; inset: 0;
     background: radial-gradient(ellipse at center top, rgba(201,168,76,0.08) 0%, transparent 65%);
   }
+
+    .hero-btns {
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero h1,
+  .hero-eyebrow,
+  .hero-subtitle,
+  .hero-desc,
+  .hero-nav-sub {
+  position: relative;
+  z-index: 2;
+  }
+
   .hero-eyebrow { color: var(--gold); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 20px; }
   .hero h1 { font-family: 'Playfair Display', serif; color: var(--gold); font-size: 62px; line-height: 1.1; font-weight: 700; margin-bottom: 12px; letter-spacing: -0.02em; }
   .hero-subtitle { color: var(--gold-light); font-family: 'Cormorant Garamond', serif; font-size: 16px; letter-spacing: 0.05em; margin-bottom: 6px; }
