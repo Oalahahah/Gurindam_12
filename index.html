@@ -6,6 +6,7 @@
   <title>Gurindam Dua Belas</title>
 
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="popup.css">
 
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
@@ -289,30 +290,33 @@
   <div class="section-eyebrow">Jejak Peradaban · Cultural Legacy</div>
   <h2 class="section-title">Warisan yang Terjaga</h2>
   <div class="gallery-grid">
-    <div class="gallery-item">
+    <div class="gallery-item" onclick="openModal(0)">
       <div class="img-holder">
         <img src="assets/PulauPenyengat.jpg" alt="Pulau Penyengat, Riau">
       </div>
-      <div class="gallery-label"><span>Pulau Penyengat, Riau</span></div>
+    <div class="gallery-label"><span>Pulau Penyengat, Riau</span></div>
+  </div>
+
+  <div class="gallery-item" onclick="openModal(1)">
+    <div class="img-holder">
+      <img src="assets/MasjidSultanRiau.jpg" alt="Masjid Sultan, Riau">
     </div>
-    <div class="gallery-item">
-      <div class="img-holder">
-        <img src="assets/MasjidSultanRiau.jpg" alt="Masjid Sultan, Riau">
-      </div>
-      <div class="gallery-label"><span>Masjid Sultan Riau</span></div>
-    </div>
-    <div class="gallery-item">
-      <div class="img-holder">
-        <img src="assets/NaskahAsli.jpg" alt="Naskah Asli Gurindam">
-      </div>
-      <div class="gallery-label"><span>Naskah Asli Gurindam</span></div>
-    </div>
-    <div class="gallery-item">
+    <div class="gallery-label"><span>Masjid Sultan Riau</span></div>
+  </div>
+
+<div class="gallery-item" onclick="openModal(2)">
+  <div class="img-holder">
+      <img src="assets/NaskahAsli.jpg" alt="Naskah Asli Gurindam">
+  </div>
+  <div class="gallery-label"><span>Naskah Asli Gurindam</span></div>
+  </div>
+
+  <div class="gallery-item" onclick="openModal(3)">
       <div class="img-holder">
         <img src="assets/PatungRaja.jpg" alt="Patung Raja Ali Haji">
       </div>
       <div class="gallery-label"><span>Patung Raja Ali Haji</span></div>
-    </div>
+      </div>
   </div>
 </section>
  
@@ -347,6 +351,25 @@
   <div class="footer-copy">© 2024 Gurindam Dua Belas · Preserving Malay Literary Heritage · Pulau Penyengat, Riau</div>
 </footer>
 
+    <!--Image pop up-->>
+  <div id="imageModal" class="modal" onclick="closeModal()">
+  <span class="close-btn">&times;</span>
+
+  <button class="modal-arrow left" onclick="event.stopPropagation(); prevImage();">
+    &#10094;
+  </button>
+
+  <div class="modal-wrapper" onclick="event.stopPropagation()">
+    <img id="modalImage" class="modal-content">
+    <div id="modalCaption" class="modal-caption"></div>
+  </div>
+
+  <button class="modal-arrow right" onclick="event.stopPropagation(); nextImage();">
+    &#10095;
+  </button>
+  </div>
+
+  <script src="popup.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
